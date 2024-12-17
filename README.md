@@ -14,10 +14,14 @@ En esta introducción se presenta:
 
 * El diseño de controladores de casos de uso en la capa de servicios de aplicación.
 
-* El desacoplamiento, via interfaces, de los controladores específicos tanto de casos de uso como de servicios externos (incluidos los ofrecidos por el framework, como en el caso de JPA), para poder ofrecer dichos servicios a través de diferentes contextos, ya sea de servicio como hacia diferentes arquitecturas de persistencia. Para ello se ha trasladado la interfaz de JPA a la capa de infraestructura, concretamente a la supcapa de acceso a persistencia via JPA. Así como exponer los casos de uso a través de una interfaz e inyectar la implementación específica.
+* Desacoplamiento, via interfaces, de los controllers/adapters específicos tanto de casos de uso como de servicios externos como los ofrecidos por el framework (JPA)
 
-* La inyeccion de dependencias proporcionada por Spring para entregar el objeto adecuado que debe ofrecer el servicio.
+* Es posible utilizar diferentes implementaciones en función del contexto: diferentes formas de servicio, arquitecturas de persistencia, etc.
 
-* La arquitectura utilizada en el proyecto para una correcta separación de responsabilidades por capa a la vez que separamos entidades en contextos. Los contextos nos permiten segmentar responsabilidades.
+* Para ello se traslada la interfaz JPA a la capa de infraestructura (supcapa persistencia/jpa). Y se exponer los casos de uso a través de una interfaz, para permitir inyectar una implementación específica.
+
+* La inyeccion de dependencias proporcionada por Spring se responsabiliza de la entrega del objeto adecuado que debe ofrecer el servicio.
+
+* La arquitectura utilizada en el proyecto permite una correcta separación de responsabilidades por capa a la vez que separamos entidades en contextos. Los contextos nos permiten segmentar responsabilidades. 
 
 Queda pendiente la integración en esta arquitectura de la capa de presentacion implementandola a partir de servicios REST.
