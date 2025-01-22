@@ -2,7 +2,7 @@
 
 Introduccion a la implementacion de la capa de servicios de aplicación, donde codificamos los casos de uso que ofrece nuestro dominio.
 
-La implementacion de los casos se uso se realiza via controladores específicos para cada servicio.
+La implementacion de los casos se uso se realiza via controladores de servicio específicos para cada entidad.
 
 Para este ejemplo se ha dado al estos controladores la responsabilidades de orquestar servicios como el de Serializacion a los formatos JSON-XML y el de recuperación de datos desde los servicios de persistencia implementados a través de JPA. 
 
